@@ -9,26 +9,30 @@ var quiz = {
 	question: [
 	{
 		question: "What is html",
-		answers: "a mark up language",
+		answer: "a mark up language",
 		choices: ['a programming language', 'a mark up language', 'a styling language']
 
 
 	},
 	{
 		question: "What is CSS",
-		answers: "a styling language",
+		answer: "a styling language",
 		choices: ['a programming language', 'a mark up language', 'a styling language']
 
 
 	},
 	{	
 		question: "What is JavaScrpt",
-		answers: "a programming language",
+		answer: "a programming language",
 		choices: ['a programming language', 'a mark up language', 'a styling language']
 
-	}
+	},
+	{
+		question: "What is JavaScrpt",
+		answer: ["greatest quiz ever", "its the best", "its awesome"],
+		choices: ['greatest quiz ever', 'its the best', 'its awesome']
 
-
+	},
 	]
 
 
