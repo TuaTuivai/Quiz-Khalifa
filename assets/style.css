@@ -15,7 +15,7 @@ body {
     color: white;
 }
 
-p{
+p{  
     font-size: 1cm;
 }
 
@@ -51,8 +51,65 @@ button {
     height: 100%;
     width: 50%;
     margin: 0 auto;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
 }
 
 h1, h2{
+    text-align: center;
     color: darkgoldenrod;
+}
+
+.header, main{
+    margin-bottom:30vh;
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: darkslategray;
+
+
+}
+
+.header p{
+    text-align: center;
+    
+}
+
+.header button{
+    display: block;
+    margin: 0 auto;
+
+}
+
+main{
+    display: none;
+}
+
+
+.questions{
+
+
+
+}
+
+.finish-line{
+
+
+
+
+}
+
+.score-screen{
+    display: block;
+
+}
+
+.score-screen ol{
+    overflow-y: scroll;
+
+}
+
+
+li {
+    list-style: none;
 }
