@@ -24,6 +24,7 @@ button {
     background-color: black;
     font-size:  .5cm;
     color: white;
+   
 
 
 }
@@ -61,13 +62,17 @@ h1, h2{
     color: darkgoldenrod;
 }
 
-.header, main{
+.header{
+    display: block;
     margin-bottom:30vh;
     margin-left: 10%;
     margin-right: 10%;
     background-color: darkslategray;
 
 
+}
+main{
+    display: block;
 }
 
 .header p{
@@ -82,25 +87,25 @@ h1, h2{
 }
 
 main{
-    display: none;
+    display: block;
 }
 
 
 .questions{
-
+    display: none;
 
 
 }
 
 .finish-line{
-
+    display: none;
 
 
 
 }
 
 .score-screen{
-    display: block;
+    display: none;
 
 }
 
