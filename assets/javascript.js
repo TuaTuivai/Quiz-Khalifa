@@ -1,16 +1,35 @@
-var finishLine     = document.querySelector('.finish-line');
-var scoreBoard     = document.querySelector('.score-screen');
+var finishLine     = document.querySelector('.scoreboard');
+var scoreBoard     = document.querySelector('.highscore-button');
 var questions      = document.querySelector('.questions');
-var header         = document.querySelector('.header');
+var header         = document.querySelector('.welcome-screen');
 var scoreAndTimer  = document.querySelector('.high-score-timer-bar');
 var outerContainer = document.querySelector('.outer-container');
 var innerContainer = document.querySelector('.inner-container');
 var submit         = document.querySelector('.submit');
 var choices        = document.querySelector('.choices'); 
-var startButton    = document.querySelector('.start-quiz');
+var startButton    = document.querySelector('.start-quiz-button');
+var question       = document.querySelector('#question');
+var choice1        = document.querySelector('#choice1') 
+var choice2        = document.querySelector('#choice2') 
+var choice3        = document.querySelector('#choice3') 
+var choice4        = document.querySelector('#choice4') 
+var currentIndex   = 0
+var timeLeft       = 60
+var timer          
+var countDown      =document.querySelector('#countdown')
+
+function myFunction (){
+    header.style.display="none"
+    questions.style.display='block'
+    startTimer()
+    changeQuestion()
+};
 
 
-// break 
+
+startButton.addEventListener("click", myFunction);
+
+
 
 var quizContent= [
     {
@@ -34,4 +53,37 @@ var quizContent= [
         choices: ["a mark up language", "a styling language", "a programming language", "an art language"]
     }
  
-]
+];
+
+function changeQuestion (){
+    question.textContent=quizContent[currentIndex].question
+    choice1.textContent=quizContent[currentIndex].choices[0]
+    choice2.textContent=quizContent[currentIndex].choices[1]
+    choice3.textContent=quizContent[currentIndex].choices[2]
+    choice4.textContent=quizContent[currentIndex].choices[3]
+};
+function clickAnswer(event){
+    var userAnswer    = (event.target.textContent)
+    var correctAnswer = quizContent[currentIndex].answer
+    if (userAnswer == correctAnswer){
+        alert('correct')
+        
+    }
+    else {
+        alert('wrong')
+    }
+    currentIndex++
+    changeQuestion()
+}
+
+function startTimer (){
+    timer = setInterval(function(){
+        timeLeft--
+        countDown.textContent='Timer: '+ timeLeft
+    }, 1000)
+}
+
+choice1.addEventListener('click',clickAnswer)
+choice2.addEventListener('click',clickAnswer)
+choice3.addEventListener('click',clickAnswer)
+choice4.addEventListener('click',clickAnswer)

@@ -10,22 +10,19 @@
 
 body {
     background-color:#fb8a00;
-    
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
 }
 
 p{  
+    color: white;
     font-size: .5cm;
+    margin-bottom: 10px;
 }
 
-button {
+.start-quiz-button {
     outline:none;
-    background-color: black;
-    font-size:  .5cm;
-    color: white;
-   
-
+    font-size:.5cm;
 
 }
 
@@ -58,11 +55,12 @@ button {
 }
 
 h1, h2{
+    margin-bottom: 10px;
     text-align: center;
     color: darkgoldenrod;
 }
 
-.header{
+.welcome-screen{
     display: block;
     margin-bottom:30vh;
     margin-left: 10%;
@@ -75,12 +73,12 @@ main{
     display: block;
 }
 
-.header p{
+.welcome-screen p{
     text-align: center;
     
 }
 
-.header button{
+.welcome-screen button{
     display: block;
     margin: 0 auto;
 
@@ -93,11 +91,27 @@ main{
 
 .questions{
     display: none;
+    background-color: darkslategray;
+    margin-bottom:30vh;
+    margin-left: 10%;
+    margin-right: 10%;
 
 
 }
+.choices{
+   display: flex;
+   flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.choices button{
+    padding: 5px;
+    width: 70%;
+    margin: 10px;
+}
 
-.finish-line{
+
+.scoreboard{
     display: none;
 
 
