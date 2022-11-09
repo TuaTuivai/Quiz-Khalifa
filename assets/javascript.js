@@ -1,4 +1,5 @@
 var finishLine     = document.querySelector('.scoreboard');
+var scoreScreen    = document.querySelector('.score-screen')
 var scoreBoard     = document.querySelector('.highscore-button');
 var questions      = document.querySelector('.questions');
 var header         = document.querySelector('.welcome-screen');
@@ -16,7 +17,8 @@ var choice4        = document.querySelector('#choice4')
 var currentIndex   = 0
 var timeLeft       = 60
 var timer          
-var countDown      =document.querySelector('#countdown')
+var countDown      = document.querySelector('#countdown')
+var backButton     = document.querySelector('.backbutton')
 
 function myFunction (){
     header.style.display="none"
@@ -25,12 +27,35 @@ function myFunction (){
     changeQuestion()
 };
 
+function highScoreButton(){
+    header.style.display='none'
+    question.style.display='none'
+    scoreScreen.style.display='block'};
+
+function endOfQuiz (){
+     questions.style.display='none'
+    finishLine.style.display='block'
+    };
+    
+function backToQuiz (){
+    myFunction()
+    // header.style.display="none"
+    // scoreScreen.style.display='none'
+    // questions.style.display='block'
+    // startTimer()
+    // changeQuestion()
+    // scoreScreen.style.display='none'
+    // questions.style.display='block'
+};
+
+
 
 
 startButton.addEventListener("click", myFunction);
-
-
-
+scoreBoard.addEventListener('click', highScoreButton);
+backButton.addEventListener('click',backToQuiz);
+// choice3.addEventListener('click',endOfQuiz);
+// supposed to be any answer instead of choice
 var quizContent= [
     {
         question: "1. Which tag should typically be at the bottom of your HTML page?",
@@ -71,6 +96,7 @@ function clickAnswer(event){
     }
     else {
         alert('wrong')
+        timeLeft --
     }
     currentIndex++
     changeQuestion()
@@ -87,3 +113,4 @@ choice1.addEventListener('click',clickAnswer)
 choice2.addEventListener('click',clickAnswer)
 choice3.addEventListener('click',clickAnswer)
 choice4.addEventListener('click',clickAnswer)
+

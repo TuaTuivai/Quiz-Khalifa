@@ -99,8 +99,8 @@ main{
 
 }
 .choices{
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -120,7 +120,9 @@ main{
 
 .score-screen{
     display: none;
-
+    flex-direction: column;
+    justify-content: center;
+    background-color: darkslategray;
 }
 
 .score-screen ol{
@@ -131,4 +133,18 @@ main{
 
 li {
     list-style: none;
+}
+
+.highscores{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.backbutton{
+    direction: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
