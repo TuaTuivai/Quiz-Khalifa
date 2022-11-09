@@ -39,15 +39,19 @@ function endOfQuiz (){
     
 function backToQuiz (){
     myFunction()
-    // header.style.display="none"
-    // scoreScreen.style.display='none'
-    // questions.style.display='block'
-    // startTimer()
-    // changeQuestion()
-    // scoreScreen.style.display='none'
-    // questions.style.display='block'
+    scoreScreen.style.display='none'
+    question.style.display='block'
+
+// needs to finish final question onto final screen with score and input text
+};
+function Done(){
+    quizContent[0],choices[3]
+    endOfQuiz()
 };
 
+// function overallScoreStuff (){
+
+// }
 
 
 
@@ -75,7 +79,7 @@ var quizContent= [
     {
         question: "4. what is HTML",
         answer: "a mark up language",
-        choices: ["a mark up language", "a styling language", "a programming language", "an art language"]
+        choices: [ "a styling language","a mark up language", "a programming language", "an art language"]
     }
  
 ];
