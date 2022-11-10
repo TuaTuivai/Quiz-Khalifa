@@ -8,7 +8,9 @@
     /* border: 1px dotted red; */
 }
 
+
 body {
+  
     background-color:#fb8a00;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
    
@@ -47,7 +49,9 @@ p{
 .inner-container{
     background-color:black;
     height: 100%;
-    width: 50%;
+    width: 800px;
+    max-width: 80%;
+    border-radius: 5px;
     margin: 0 auto;
     display: flex;
     flex-direction:column;
@@ -84,12 +88,7 @@ main{
 
 }
 
-main{
-    display: block;
-}
-
-
-.questions{
+.question-content{
     display: none;
     background-color: darkslategray;
     margin-bottom:30vh;
@@ -111,7 +110,7 @@ main{
 }
 
 
-.scoreboard{
+.quiz-finished{
     display: none;
 
 
